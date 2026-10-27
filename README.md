@@ -37,15 +37,15 @@ Kargo fiyat karşılaştırmaları, kurumsal sözleşme pazarlıkları ve 38 fir
 ### 1. Kurulum
 
 ```bash
-git clone https://github.com/eimza-kep/turkey-cargo-api-wrapper.git
-cd turkey-cargo-api-wrapper
+git clone https://github.com/eimza-kep/turkiye-kargo-api-wrapper.git
+cd turkiye-kargo-api-wrapper
 ```
 
 ### 2. Komut Satırı (CLI) Kullanımı
 
 #### A. Koli Desi ve Faturalandırılacak Ağırlığı Hesaplayın:
 ```bash
-python -m turkey_cargo desi --width 30 --length 40 --height 20 --weight 5.0
+python -m turkiye_kargo desi --width 30 --length 40 --height 20 --weight 5.0
 ```
 *Çıktı:*
 ```
@@ -59,12 +59,12 @@ Paket Kategorisi: 6-15 Desi / Orta Boy Koli
 
 #### B. Kargo Takip Kodu Sorgulayın:
 ```bash
-python -m turkey_cargo track --carrier aras --code ARAS123456789
+python -m turkiye_kargo track --carrier aras --code ARAS123456789
 ```
 
 #### C. Test Kargo Siparişi ve Barkod Verisi Üretin:
 ```bash
-python -m turkey_cargo create --carrier yurtici --recipient "Ahmet Kaya" --city "İzmir" --desi 3.5
+python -m turkiye_kargo create --carrier yurtici --recipient "Ahmet Kaya" --city "İzmir" --desi 3.5
 ```
 
 ---
@@ -72,7 +72,7 @@ python -m turkey_cargo create --carrier yurtici --recipient "Ahmet Kaya" --city 
 ## 🐍 Python Kütüphanesi Olarak Kullanım
 
 ```python
-from turkey_cargo import get_billable_weight, get_carrier_client
+from turkiye_kargo import get_billable_weight, get_carrier_client
 
 # 1. Desi Hesabı
 desi_info = get_billable_weight(width_cm=35, length_cm=45, height_cm=25, actual_kg=4.2)

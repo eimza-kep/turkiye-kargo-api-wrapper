@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import unittest
-from turkey_cargo.desi import calculate_desi, get_billable_weight
-from turkey_cargo.carriers import get_carrier_client
-from turkey_cargo.models import TrackingStatus
+from turkiye_kargo.desi import calculate_desi, get_billable_weight
+from turkiye_kargo.carriers import get_carrier_client
+from turkiye_kargo.models import TrackingStatus
 
-class TestTurkeyCargo(unittest.TestCase):
+class TestTurkiyeKargo(unittest.TestCase):
     def test_calculate_desi(self):
         # 30 * 40 * 20 / 3000 = 8.0
         desi = calculate_desi(30, 40, 20)
